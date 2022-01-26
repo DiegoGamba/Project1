@@ -6,7 +6,7 @@ pipeline {
         stage('Workspace') {
             steps{            
             sh "cd /Users/diegogamba"                
-            sh "docker build . -t docker/getting-started"    
+            sh "docker build . -t name:getting-started"    
           }    
        }
     }
