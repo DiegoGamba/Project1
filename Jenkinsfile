@@ -3,13 +3,16 @@ pipeline {
         label 'master'
     }
     stages {
-        stage('build and push') {
+        stage('Workspace') {
             steps{            
             sh "cd /Users/diegogamba"    
         }
+    }
+
+        stage('Build') {
             steps{            
             sh "docker build . -t docker/getting-started"    
-        }
-      }
+        }    
     }
-}
+  } 
+} 
