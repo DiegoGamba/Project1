@@ -1,16 +1,11 @@
 pipeline {
     agent {
-        label 'master'
+        label 'main'
     }
     stages {
         stage('build and push') {
-            steps{
-            when {
-                branch 'main'
-            }
-            sh "docker build -t docker/getting-started ."
-
-           
+            steps{            
+            sh "docker build -t docker/getting-started ."    
         }
       }
     }
