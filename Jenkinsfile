@@ -1,18 +1,17 @@
 pipeline {
-    options {
-        timeout(time: 1, unit: 'HOURS')
-    }
     agent {
         label 'master'
     }
     stages {
         stage('build and push') {
+            steps{
             when {
-                branch 'master'
+                branch 'main'
             }
             sh "docker build -t docker/getting-started ."
 
            
         }
+      }
     }
 }
