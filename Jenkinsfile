@@ -8,7 +8,7 @@ pipeline {
             sh "cd /Users/diegogamba"    
         }
             steps{            
-            sh "docker build -t docker/getting-started ."    
+            sh "docker build . -t docker/getting-started"    
         }
       }
     }
