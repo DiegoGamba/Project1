@@ -5,14 +5,9 @@ pipeline {
     stages {
         stage('Workspace') {
             steps{            
-            sh "cd /Users/diegogamba"    
-        }
+            sh "cd /Users/diegogamba"                
+            sh "docker build . -t docker/getting-started"    
+          }    
+       }
     }
-
-        stage('Build') {
-            steps{            
-            sh "docker build . -t "docker/getting-started""
-        }    
-    }
-  } 
-} 
+}   
